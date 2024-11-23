@@ -1,25 +1,2 @@
 
-This site is mostly kaput. It hasn't been touched in a while. 
-
-------------------------------------------------
-
-
-# movethewebforward.org
-
-You ♡ Web Standards. You maybe even feel compelled to “give back” to the community. Curious about where to start? We’re here to help.
-
-## Contributing
-
-Do you have some ideas for ways that all developers—from the seasoned professionals to those donning their first blue beanie—can get involved, learn more, and help move web standards forward? [Chime in here](https://etherpad.mozilla.org/igotmybeanie) or look at the github issues!. We'll be adding new ideas, resources and tasks regularly so feel free to check back often.
-
-## IRC channel
-
-We're in #movethewebforward on freenode IRC. For those without an IRC client see <http://webchat.freenode.net/?channels=movethewebforward>
-
-## Staging server
-
-View the current site at <http://h5bp.github.com/movethewebforward/>
-
-## Dev Notes
-
-Add `?mobile` to the end of `index.html` to see assets as they will appear on mobile devices (determined by screen size, really), and “?basic” to see assets as they will appear in browsers that don’t support media queries. I haven’t done much in the way of styling either way. There’s quite a bit of behind-the-scenes logic goin’ on that we most definitely will not need for a one-pager, so a lot of that will be removed very soon.
+<!DOCTYPE html> <html lang="ar" dir="rtl"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="https://unpkg.com/mvp.css"> <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notonaskharabic.css"> <title>كود خصم</title> <style> html, body { font-family: 'Noto Naskh Arabic'; margin: 10px 20px; background-color: yellow; } .coupon { border: 5px dashed #bbb; width: 80%; margin: 0 auto; max-width: 600px; background-color: white; text-align: center; position: relative; padding: 20px; } .coupon h1 { margin: 0; padding: 10px; background-color: #f2f2f2; } .code { padding: 20px; font-size: 20px; background-color: #e0e0e0; margin-bottom: 10px; } .copy-btn { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; font-size: 16px; border: 3px solid yellow; } .copy-btn:hover { background-color: #45a049; } </style> </head> <body> <div class="coupon"> <h1>احصل على خصم 70%</h1> <div class="code" id="couponCode">NDX150</div> <button class="copy-btn" onclick="copyAndRedirect()">نسخ الكود والذهاب إلى الموقع</button> </div> <script> function copyAndRedirect() { var code = document.getElementById("couponCode").innerText; navigator.clipboard.writeText(code).then(function() { alert('تم نسخ الكود: ' + code); window.location.href = "https://www.noon.com/saudi-ar/"; }, function(err) { console.error('فشل النسخ: ', err); }); } </script> </body> </html> 
